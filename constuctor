@@ -1,0 +1,75 @@
+
+//super keyword 
+//used to refer the base class of the class in which it is beging used.
+//super keyword used to refer immediate parent class object .when
+//we create object of subclass ,an object of parent class is created implicitly.
+//1.to refer instance variable of immidiate parent class.
+//2.to invoke methods of immediate parent class.
+//3.to invoke constructor of immediate parent class.
+class loan {
+    int rate;
+   loan(){
+    System.out.println("hi i am constructor of loan");
+   }
+   loan(int rate){
+    this.rate=rate;
+   }
+   void printRate(){
+    System.out.println(this.rate);
+   }
+}
+class Carloan extends loan{
+    int rate;
+    Carloan(){
+        System.out.println("hi i am default consturctor of carloan");
+        System.out.println(super.rate);//using super to access instance variable of parent class
+
+    }
+    carLoan(int rate){
+        super(7);//to invoke the constructor of parent class(must be 1st line of child constructor)
+        this.rate=rate;
+    }
+    }
+    void printRate(){
+        System.out.pritln(this.rate);
+        super.printRate();//2.using super to invoke methods of the parent class
+        System.out.println(super.rate);
+    }
+public class SuperStudy{
+    public static void main(String [] args){
+        carLoan c1= new carLoan(8);
+        c1.printRate();
+    }
+}
+
+//the constructor of base class will always run before the constructor of tht child class so as to initilalize any
+//variable in parent class that might be required in the child class
+
+//final keyword
+class A{
+    final int noOfAlaphabets=5;
+    final int noOfDigits;
+    //final variables value once assingned cannot be changed we cannot override this function
+    //either assign the value at time of declaration or assign the value inside construcotors  
+    a()
+    {
+        noOfDigits=10;
+    }
+    final void fun(){
+        System.out.println("hi i am a fucntion in class A");
+    }
+    
+}
+class B extends A{
+    //void fun(){
+        //System.out.println("i am function is B overriding function in A");
+    }
+    
+     
+
+}
+public class FinalStudy{
+    public static void main(String args[]){
+
+    }
+}
